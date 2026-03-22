@@ -12,13 +12,13 @@ public class DriverManager {
 	private WebDriver driver;
 	
 	private void initDriver() {
-		if(driver == null) {
+		if(this.driver == null) {
 			String browser = ConfigLoader.getConfig("browser");
 			switch(browser.toLowerCase()) {
 				case "chrome":{
 					try {
 						WebDriverManager.chromedriver().setup();
-						driver = new ChromeDriver();
+						this.driver = new ChromeDriver();
 					}catch (Exception e) {
 						isError = true;
 						errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
@@ -28,7 +28,7 @@ public class DriverManager {
 				case "edge":{
 					try {
 						//WebDriverManager.edgedriver().setup();
-						driver = new EdgeDriver();
+						this.driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;
 						errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
@@ -40,13 +40,13 @@ public class DriverManager {
 					errMsg = "Error occurred while opening driver for browser " + browser + ": browser not found";
 			}
 		}
-		driver.manage().window().maximize();
+		this.driver.manage().window().maximize();
 	}
 	public WebDriver getDriver() {
-		if(driver == null) {
+		if(this.driver == null) {
 			initDriver();
 		}
-		return driver;
+		return this.driver;
 	}
 	public void quitDriver(WebDriver driver) {
 		if(driver != null) {
