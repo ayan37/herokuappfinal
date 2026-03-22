@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,6 +19,10 @@ public class DriverManager {
 				case "chrome":{
 					try {
 						WebDriverManager.chromedriver().setup();
+						ChromeOptions options = new ChromeOptions();
+				        options.addArguments("--headless=new");   // required for Jenkins
+				        options.addArguments("--disable-gpu");
+				        options.addArguments("--window-size=1920,1080");
 						this.driver = new ChromeDriver();
 					}catch (Exception e) {
 						isError = true;
