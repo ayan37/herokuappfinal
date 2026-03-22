@@ -18,7 +18,7 @@ public class DriverManager {
 			switch(browser.toLowerCase()) {
 				case "chrome":{
 					try {
-						WebDriverManager.chromedriver().setup();
+						//WebDriverManager.chromedriver().setup();
 						ChromeOptions options = new ChromeOptions();
 				        options.addArguments("--headless=new");   // required for Jenkins
 				        options.addArguments("--disable-gpu");
