@@ -52,6 +52,9 @@ pipeline {
             alwaysLinkToLastBuild: true,
             allowMissing: true   // allow publishing even if missing
         ])
+        archiveArtifacts artifacts: 'reports/**', fingerprint: true
+
+
         }
     }
 }

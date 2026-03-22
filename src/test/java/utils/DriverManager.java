@@ -10,10 +10,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverManager {
 	public static boolean isError = false;
 	public static String errMsg = "";
-	private WebDriver driver;
+	private static WebDriver driver;
 	
-	private void initDriver() {
-		if(this.driver == null) {
+	private static void initDriver() {
+		if(driver == null) {
 			String browser = ConfigLoader.getConfig("browser");
 			switch(browser.toLowerCase()) {
 				case "chrome":{
@@ -23,7 +23,7 @@ public class DriverManager {
 				        options.addArguments("--headless=new");   // required for Jenkins
 				        options.addArguments("--disable-gpu");
 				        options.addArguments("--window-size=1920,1080");
-						this.driver = new ChromeDriver();
+						driver = new ChromeDriver();
 					}catch (Exception e) {
 						isError = true;
 						errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
@@ -33,7 +33,7 @@ public class DriverManager {
 				case "edge":{
 					try {
 						WebDriverManager.edgedriver().setup();
-						this.driver = new EdgeDriver();
+						driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;
 						errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
@@ -45,15 +45,15 @@ public class DriverManager {
 					errMsg = "Error occurred while opening driver for browser " + browser + ": browser not found";
 			}
 		}
-		this.driver.manage().window().maximize();
+		driver.manage().window().maximize();
 	}
-	public WebDriver getDriver() {
-		if(this.driver == null) {
+	public static WebDriver getDriver() {
+		if(driver == null) {
 			initDriver();
 		}
-		return this.driver;
+		return driver;
 	}
-	public void quitDriver(WebDriver driver) {
+	public static void quitDriver() {
 		if(driver != null) {
 			driver.quit();
 			driver = null;
