@@ -22,7 +22,7 @@ public class DriverManager {
 //				        options.addArguments("--headless=new");   // required for Jenkins
 //				        options.addArguments("--disable-gpu");
 //				        options.addArguments("--window-size=1920,1080");
-						driver = new ChromeDriver();
+						driver = new WebDriver();
 					}catch (Exception e) {
 						isError = true;
 						errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
