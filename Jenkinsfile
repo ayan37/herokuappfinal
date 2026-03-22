@@ -17,13 +17,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'mvn test -DsuiteXmlFile=testng.xml'
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
             }
         }
 
