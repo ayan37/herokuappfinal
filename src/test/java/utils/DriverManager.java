@@ -13,8 +13,8 @@ public class DriverManager {
 	private static WebDriver driver;
 	
 	private static void initDriver() {
+		String browser = ConfigLoader.getConfig("browser");
 		if(driver == null) {
-			String browser = ConfigLoader.getConfig("browser");
 			switch(browser.toLowerCase()) {
 				case "chrome":{
 					try {
@@ -43,7 +43,12 @@ public class DriverManager {
 					errMsg = "Error occurred while opening driver for browser " + browser + ": browser not found";
 			}
 		}
-		driver.manage().window().maximize();
+		try {
+			driver.manage().window().maximize();
+		}catch (Exception e) {
+			isError = true;
+			errMsg = "Error occurred while opening driver for browser " + browser + ": " + e.getMessage();
+		}
 	}
 	public static WebDriver getDriver() {
 		if(driver == null) {
