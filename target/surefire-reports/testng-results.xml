@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-21T22:51:12 IST" name="Suite" finished-at="2026-03-21T22:51:23 IST" duration-ms="10973">
+  <suite started-at="2026-03-22T20:08:51 IST" name="Suite" finished-at="2026-03-22T20:09:09 IST" duration-ms="18695">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@6973b51b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@8dbdac1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-03-21T22:51:12 IST" name="Test" finished-at="2026-03-21T22:51:23 IST" duration-ms="10973">
+    <test started-at="2026-03-22T20:08:51 IST" name="Test" finished-at="2026-03-22T20:09:09 IST" duration-ms="18695">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@6973b51b]" started-at="2026-03-21T22:51:12 IST" name="setUpClass" finished-at="2026-03-21T22:51:13 IST" duration-ms="485" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@8dbdac1]" started-at="2026-03-22T20:08:51 IST" name="setUpClass" finished-at="2026-03-22T20:08:51 IST" duration-ms="549" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@73393584]]>
+                <![CDATA[org.testng.TestRunner@5529ff44]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@6973b51b]" started-at="2026-03-21T22:51:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-21T22:51:23 IST" duration-ms="9839" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@8dbdac1]" started-at="2026-03-22T20:08:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-22T20:08:58 IST" duration-ms="6938" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,54 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: MicrosoftEdge=146.0.3856.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f9a1de416c8af986be7d8ee9cb594e, clickElement {id=f.5A62A1AAF5965BEF23E07AD21210F714.d.8BB67CCB2A9A3DB0A79D6EE7A6AAE4DA.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (45f9a1de416c8af986be7d8ee9cb594e)] -> css selector: a[href *= 'upload']]
-Session ID: 45f9a1de416c8af986be7d8ee9cb594e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: MicrosoftEdge=146.0.3856.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f9a1de416c8af986be7d8ee9cb594e, clickElement {id=f.5A62A1AAF5965BEF23E07AD21210F714.d.8BB67CCB2A9A3DB0A79D6EE7A6AAE4DA.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (45f9a1de416c8af986be7d8ee9cb594e)] -> css selector: a[href *= 'upload']]
-Session ID: 45f9a1de416c8af986be7d8ee9cb594e
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
-at utils.WebDriverHelper.ClickElement(WebDriverHelper.java:21)
-at pages.HomePage.navigateToPage(HomePage.java:54)
-at stepdefs.HomeSteps.onPage(HomeSteps.java:22)
-at ✽.I am on "FileUpload" page(file:///E:/workspace/herokuappfinal/src/test/resources/features/FileUpload/FileUpload.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@6973b51b]" started-at="2026-03-21T22:51:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-21T22:51:23 IST" duration-ms="9839" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@8dbdac1]" started-at="2026-03-22T20:08:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-22T20:09:04 IST" duration-ms="5317" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -94,54 +50,22 @@ at ✽.I am on "FileUpload" page(file:///E:/workspace/herokuappfinal/src/test/re
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: MicrosoftEdge=146.0.3856.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f9a1de416c8af986be7d8ee9cb594e, clickElement {id=f.5A62A1AAF5965BEF23E07AD21210F714.d.8BB67CCB2A9A3DB0A79D6EE7A6AAE4DA.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (45f9a1de416c8af986be7d8ee9cb594e)] -> css selector: a[href *= 'upload']]
-Session ID: 45f9a1de416c8af986be7d8ee9cb594e]]>
+              <![CDATA[Skipping execution for ID: 2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: MicrosoftEdge=146.0.3856.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [45f9a1de416c8af986be7d8ee9cb594e, clickElement {id=f.5A62A1AAF5965BEF23E07AD21210F714.d.8BB67CCB2A9A3DB0A79D6EE7A6AAE4DA.e.9}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (45f9a1de416c8af986be7d8ee9cb594e)] -> css selector: a[href *= 'upload']]
-Session ID: 45f9a1de416c8af986be7d8ee9cb594e
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
-at utils.WebDriverHelper.ClickElement(WebDriverHelper.java:21)
-at pages.HomePage.navigateToPage(HomePage.java:54)
-at stepdefs.HomeSteps.onPage(HomeSteps.java:22)
-at ✽.I am on "FileUpload" page(file:///E:/workspace/herokuappfinal/src/test/resources/features/FileUpload/FileUpload.feature:7)
+              <![CDATA[org.testng.SkipException: Skipping execution for ID: 2
+at utils.ExcelDataProvider.getData(ExcelDataProvider.java:103)
+at stepdefs.FileUploadSteps.selectFileToUpload(FileUploadSteps.java:26)
+at ✽.I select the file with id "2" to upload(file:///E:/workspace/herokuappfinal/src/test/resources/features/FileUpload/FileUpload.feature:8)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@6973b51b]" started-at="2026-03-21T22:51:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-21T22:51:23 IST" duration-ms="10144" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@8dbdac1]" started-at="2026-03-22T20:09:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-22T20:09:09 IST" duration-ms="5534" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -154,49 +78,10 @@ at ✽.I am on "FileUpload" page(file:///E:/workspace/herokuappfinal/src/test/re
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, findElement {using=css selector, value=#file-upload}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [null, findElement {using=css selector, value=#file-upload}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 146.0.3856.62, fedcm:accounts: true, goog:processID: 4548, ms:edgeOptions: {debuggerAddress: localhost:52487}, msedge: {msedgedriverVersion: 146.0.3856.72 (a825c519de68..., userDataDir: C:\Users\ayand\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52487/devtoo..., se:cdpVersion: 146.0.3856.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-at utils.WebDriverHelper.waitForElementVisible(WebDriverHelper.java:76)
-at utils.WebDriverHelper.sendKeysToElement(WebDriverHelper.java:31)
-at pages.FileUploadPage.selectFileToUpload(FileUploadPage.java:27)
-at stepdefs.FileUploadSteps.selectFileToUpload(FileUploadSteps.java:29)
-at ✽.I select the file with id "1" to upload(file:///E:/workspace/herokuappfinal/src/test/resources/features/FileUpload/FileUpload.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@6973b51b]" started-at="2026-03-21T22:51:23 IST" name="tearDownClass" finished-at="2026-03-21T22:51:23 IST" duration-ms="297" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@8dbdac1]" started-at="2026-03-22T20:09:09 IST" name="tearDownClass" finished-at="2026-03-22T20:09:09 IST" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

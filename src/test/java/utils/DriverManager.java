@@ -9,8 +9,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverManager {
 	public static boolean isError = false;
 	public static String errMsg = "";
-	private static WebDriver driver;
-	private static void initDriver() {
+	private WebDriver driver;
+	
+	private void initDriver() {
 		if(driver == null) {
 			String browser = ConfigLoader.getConfig("browser");
 			switch(browser.toLowerCase()) {
@@ -26,7 +27,7 @@ public class DriverManager {
 				}
 				case "edge":{
 					try {
-						WebDriverManager.edgedriver().setup();
+						//WebDriverManager.edgedriver().setup();
 						driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;
@@ -41,13 +42,13 @@ public class DriverManager {
 		}
 		driver.manage().window().maximize();
 	}
-	public static WebDriver getDriver() {
+	public WebDriver getDriver() {
 		if(driver == null) {
 			initDriver();
 		}
 		return driver;
 	}
-	public static void quitDriver() {
+	public void quitDriver(WebDriver driver) {
 		if(driver != null) {
 			driver.quit();
 			driver = null;

@@ -51,7 +51,7 @@ public class Hooks {
         ExtentTest extentTest  = extentReports.createTest(currentScenario.getName());
         test.set(extentTest);
 
-        WebDriver webDriver = DriverManager.getDriver();
+        WebDriver webDriver = new DriverManager().getDriver();
         driver.set(webDriver);
 
 		if(ConfigLoader.isError) {
@@ -66,7 +66,7 @@ public class Hooks {
 	}
 	@After
 	public void afterScenario() {
-		DriverManager.quitDriver();
+		new DriverManager().quitDriver(getDriver());
 		driver.remove();
         test.remove();
 	}
