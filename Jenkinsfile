@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk21'          // Configure JDK in Jenkins global tools
-        maven 'maven3'       // Configure Maven in Jenkins global tools
+        jdk 'JDK 25'          // Configure JDK in Jenkins global tools
+        maven 'Maven 3'       // Configure Maven in Jenkins global tools
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo.git'
+                git 'https://github.com/ayan37/herokuappfinal.git'
             }
         }
 
@@ -30,7 +30,10 @@ pipeline {
                 publishHTML([
                     reportDir: 'reports',
                     reportFiles: 'index.html',
-                    reportName: 'Extent Report'
+                    reportName: 'Extent Report',
+                    keepAll: true,                     // Keep reports for all builds
+                    alwaysLinkToLastBuild: true,       // Link to latest build report
+                    allowMissing: false
                 ])
             }
         }
