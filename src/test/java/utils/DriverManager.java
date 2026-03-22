@@ -27,7 +27,7 @@ public class DriverManager {
 				}
 				case "edge":{
 					try {
-						//WebDriverManager.edgedriver().setup();
+						WebDriverManager.edgedriver().setup();
 						this.driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;
