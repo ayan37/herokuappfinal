@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverManager {
 	public static boolean isError = false;
 	public static String errMsg = "";
@@ -14,6 +16,7 @@ public class DriverManager {
 			switch(browser.toLowerCase()) {
 				case "chrome":{
 					try {
+						WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver();
 					}catch (Exception e) {
 						isError = true;
@@ -23,6 +26,7 @@ public class DriverManager {
 				}
 				case "edge":{
 					try {
+						WebDriverManager.edgedriver().setup();
 						driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;

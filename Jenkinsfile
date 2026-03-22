@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'mvn test -DsuiteXmlFile=testng.xml'
+                bat 'mvn test -DsuiteXmlFile=testng.xml -Dheadless=true'
             }
         }
 
@@ -44,6 +44,14 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/*.xml'
+            publishHTML([
+            reportDir: 'reports',
+            reportFiles: 'index.html',
+            reportName: 'Extent Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true,
+            allowMissing: true   // allow publishing even if missing
+        ])
         }
     }
 }
