@@ -56,9 +56,11 @@ public class Hooks {
 
 		if(ConfigLoader.isError) {
 			Reporter.addTestExecutionSteps(getTest(), "fail", ConfigLoader.errMsg);
+			throw new RuntimeException();
 		}
 		if(DriverManager.isError) {
 			Reporter.addTestExecutionSteps(getTest(), "fail", DriverManager.errMsg);
+			throw new RuntimeException();
 		}
 		env = ConfigLoader.getConfig("env");
 		baseUrl = ConfigLoader.getConfig(env + ".url");
