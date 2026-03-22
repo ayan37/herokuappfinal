@@ -18,11 +18,10 @@ public class DriverManager {
 			switch(browser.toLowerCase()) {
 				case "chrome":{
 					try {
-						//WebDriverManager.chromedriver().setup();
-						ChromeOptions options = new ChromeOptions();
-				        options.addArguments("--headless=new");   // required for Jenkins
-				        options.addArguments("--disable-gpu");
-				        options.addArguments("--window-size=1920,1080");
+//						ChromeOptions options = new ChromeOptions();
+//				        options.addArguments("--headless=new");   // required for Jenkins
+//				        options.addArguments("--disable-gpu");
+//				        options.addArguments("--window-size=1920,1080");
 						driver = new ChromeDriver();
 					}catch (Exception e) {
 						isError = true;
@@ -32,7 +31,6 @@ public class DriverManager {
 				}
 				case "edge":{
 					try {
-						WebDriverManager.edgedriver().setup();
 						driver = new EdgeDriver();
 					}catch (Exception e) {
 						isError = true;
