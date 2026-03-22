@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ayan37/herokuappfinal.git'
+                git branch: 'main',
+            		url: 'https://github.com/ayan37/herokuappfinal.git'
+
             }
         }
 
